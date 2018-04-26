@@ -13,3 +13,9 @@ C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Hel
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\Dungeons and Dragons Helper.csproj.CoreCompileInputs.cache
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\Dungeons and Dragons Helper.exe
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\Dungeons and Dragons Helper.pdb
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\Resources\DnD_Helper.sqlite
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\System.Data.SQLite.dll
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\System.Data.SQLite.xml
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\Dungeons and Dragons Helper.csproj.CopyComplete
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\log4net.dll
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\log4net.xml
