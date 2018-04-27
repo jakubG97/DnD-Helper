@@ -61,6 +61,16 @@ namespace Dungeons_and_Dragons_Helper.Properties {
         }
         
         /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2000px_D_d_3thedit_logo_svg {
+            get {
+                object obj = ResourceManager.GetObject("_2000px_D_d_3thedit_logo_svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
         /// </summary>
         internal static byte[] DnD_Helper {

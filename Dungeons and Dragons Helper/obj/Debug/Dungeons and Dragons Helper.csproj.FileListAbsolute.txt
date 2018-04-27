@@ -19,3 +19,4 @@ C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Hel
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\Dungeons and Dragons Helper.csproj.CopyComplete
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\log4net.dll
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\log4net.xml
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\Resources\2000px-D&d-3thedit-logo.svg.png

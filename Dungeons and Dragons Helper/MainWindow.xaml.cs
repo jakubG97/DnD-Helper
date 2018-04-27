@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,9 +28,15 @@ namespace Dungeons_and_Dragons_Helper
         private SqLiteUtil SQL = null;
         public MainWindow()
         {
+            Log.Info("=======================Otwieranie nowej instancji =======================");
             InitializeComponent();
             SQL = new SqLiteUtil();
-           
+
+        }
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

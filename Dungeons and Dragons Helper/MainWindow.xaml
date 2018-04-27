@@ -5,10 +5,433 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dungeons_and_Dragons_Helper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Dungeons and Dragons Helper" Height="918" Width="783" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Grid>
-        <Label x:Name="label" Content="TEST" HorizontalAlignment="Left" Margin="133,62,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="283,73,0,0" VerticalAlignment="Top" Width="120"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85" />
+            <RowDefinition Height="83*" />
+            <RowDefinition Height="319*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0">
+                <TextBox VerticalContentAlignment="Center" x:Name="name" Padding="0" />
+                <TextBlock IsHitTestVisible="False" Text="Nazwa postaci" Foreground="Gray" FontWeight="Bold"
+                           Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock.Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=name}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <TextBox VerticalContentAlignment="Center" x:Name="playerName" />
+                <TextBlock IsHitTestVisible="False" Text="Gracz" Foreground="Gray" FontWeight="Bold" Margin="5,0,0,0"
+                           VerticalAlignment="Center">
+                    <TextBlock.Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=playerName}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Grid>
+            <Image x:Name="image" Grid.Row="0" Grid.Column="2" Grid.RowSpan="3"
+                   Source="pack://siteoforigin:,,,/Resources/2000px-D&amp;d-3thedit-logo.svg.png" />
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <ComboBox x:Name="className" />
+                    <TextBlock IsHitTestVisible="False" Text="Klasa" Foreground="Gray" FontWeight="Bold"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=className}" Value="">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <ComboBox x:Name="rassName" />
+                    <TextBlock IsHitTestVisible="False" Text="Rasa" Foreground="Gray" FontWeight="Bold"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=rassName}" Value="">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
 
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <ComboBox x:Name="characterName" />
+                    <TextBlock IsHitTestVisible="False" Text="Charakter" Foreground="Gray" FontWeight="Bold"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=characterName}" Value="">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <ComboBox x:Name="deityName" />
+                    <TextBlock IsHitTestVisible="False" Text="Bóstwo" Foreground="Gray" FontWeight="Bold"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=deityName}" Value="">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+
+                    <ComboBox x:Name="lvl">
+                        <ComboBoxItem >1</ComboBoxItem>
+                        <ComboBoxItem >2</ComboBoxItem>
+                        <ComboBoxItem >3</ComboBoxItem>
+                        <ComboBoxItem >4</ComboBoxItem>
+                        <ComboBoxItem >5</ComboBoxItem>
+                        <ComboBoxItem >6</ComboBoxItem>
+                        <ComboBoxItem >7</ComboBoxItem>
+                        <ComboBoxItem >8</ComboBoxItem>
+                        <ComboBoxItem >9</ComboBoxItem>
+                        <ComboBoxItem >10</ComboBoxItem>
+                        <ComboBoxItem >11</ComboBoxItem>
+                        <ComboBoxItem >12</ComboBoxItem>
+                        <ComboBoxItem >13</ComboBoxItem>
+                        <ComboBoxItem >14</ComboBoxItem>
+                        <ComboBoxItem >15</ComboBoxItem>
+                        <ComboBoxItem >16</ComboBoxItem>
+                        <ComboBoxItem >17</ComboBoxItem>
+                        <ComboBoxItem >18</ComboBoxItem>
+                        <ComboBoxItem >19</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock IsHitTestVisible="False" Text="Poziom" Foreground="Gray" FontWeight="Bold"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=lvl}" Value="">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <ComboBox x:Name="size" />
+                    <TextBlock IsHitTestVisible="False" Text="Rozmiar" Foreground="Gray" FontWeight="Bold"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=size}" Value="">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <TextBox PreviewTextInput="NumberValidationTextBox" VerticalContentAlignment="Center" x:Name="age" />
+                    <TextBlock IsHitTestVisible="False" Text="Wiek" Foreground="Gray" FontWeight="Bold"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=age}" Value="">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <ComboBox x:Name="sex" >
+                        <ComboBoxItem>M</ComboBoxItem>
+                        <ComboBoxItem>K</ComboBoxItem>
+                        </ComboBox>
+                    <TextBlock IsHitTestVisible="False" Text="Płeć" Foreground="Gray" FontWeight="Bold"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=sex}" Value="">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <TextBox PreviewTextInput="NumberValidationTextBox" VerticalContentAlignment="Center"
+                             x:Name="height" />
+                    <TextBlock IsHitTestVisible="False" Text="Wzrost" Foreground="Gray" FontWeight="Bold"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=height}" Value="">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox PreviewTextInput="NumberValidationTextBox" VerticalContentAlignment="Center"
+                             x:Name="weight" />
+                    <TextBlock IsHitTestVisible="False" Text="Waga" Foreground="Gray" FontWeight="Bold"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=weight}" Value="">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <ComboBox x:Name="eyes" >
+                        <ComboBoxItem>Brązowe</ComboBoxItem>
+                        <ComboBoxItem>Ciemnobrązowe</ComboBoxItem>
+                        <ComboBoxItem>Piwne</ComboBoxItem>
+                        <ComboBoxItem>Bursztynowe</ComboBoxItem>
+                        <ComboBoxItem>Zielone</ComboBoxItem>
+                        <ComboBoxItem>Szare</ComboBoxItem>
+                        <ComboBoxItem>Niebieskie</ComboBoxItem>
+                        <ComboBoxItem>Fioletowe</ComboBoxItem>
+                        <ComboBoxItem>Czerwone</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock IsHitTestVisible="False" Text="Oczy" Foreground="Gray" FontWeight="Bold"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=eyes}" Value="">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <ComboBox x:Name="hair">
+                        <ComboBoxItem>Czarne</ComboBoxItem>
+                        <ComboBoxItem>Jasny blond</ComboBoxItem>
+                        <ComboBoxItem>Blond</ComboBoxItem>
+                        <ComboBoxItem>Ciemny blond</ComboBoxItem>
+                        <ComboBoxItem>Rude</ComboBoxItem>
+                        <ComboBoxItem>Szatyn</ComboBoxItem>
+                        <ComboBoxItem>Siwe</ComboBoxItem>
+                        <ComboBoxItem>Brak</ComboBoxItem>
+                        <ComboBoxItem>Czarne</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock IsHitTestVisible="False" Text="Włosy" Foreground="Gray" FontWeight="Bold"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=hair}" Value="">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="146*" />
+                <ColumnDefinition Width="372*" />
+                <ColumnDefinition Width="259*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="9">Nazwa atrybutu</Label>
+                <Label Grid.Row="1" Grid.Column="0" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center">
+                    Siła
+                </Label>
+                <Label Grid.Row="2" Grid.Column="0" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center">
+                    Zręczność
+                </Label>
+                <Label Grid.Row="3" Grid.Column="0" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center">
+                    Budowa
+                </Label>
+                <Label Grid.Row="4" Grid.Column="0" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center">
+                    Intelekt
+                </Label>
+                <Label Grid.Row="5" Grid.Column="0" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center">
+                    Roztropność
+                </Label>
+                <Label Grid.Row="6" Grid.Column="0" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center">
+                    Charyzma
+                </Label>
+                <Label Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center" FontSize="9">
+                    Wartość
+                </Label>
+                <TextBox Grid.Column="1" Grid.Row="1" PreviewTextInput="NumberValidationTextBox"
+                         VerticalContentAlignment="Center" x:Name="StrengthValue" />
+                <TextBox Grid.Column="1" Grid.Row="2" PreviewTextInput="NumberValidationTextBox"
+                         VerticalContentAlignment="Center" x:Name="SkillValue" />
+                <TextBox Grid.Column="1" Grid.Row="3" PreviewTextInput="NumberValidationTextBox"
+                         VerticalContentAlignment="Center" x:Name="BuildValue" />
+                <TextBox Grid.Column="1" Grid.Row="4" PreviewTextInput="NumberValidationTextBox"
+                         VerticalContentAlignment="Center" x:Name="IntellectValue" />
+                <TextBox Grid.Column="1" Grid.Row="5" PreviewTextInput="NumberValidationTextBox"
+                         VerticalContentAlignment="Center" x:Name="CautionValue" />
+                <TextBox Grid.Column="1" Grid.Row="6" PreviewTextInput="NumberValidationTextBox"
+                         VerticalContentAlignment="Center" x:Name="CharismaValue" />
+                <Label Grid.Row="0" Grid.Column="2" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center" FontSize="9">
+                    Modyfikator
+                </Label>
+                <Label Grid.Row="1" Grid.Column="2" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center">
+                    0
+                </Label>
+                <Label Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center">
+                    0
+                </Label>
+                <Label Grid.Row="3" Grid.Column="2" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center">
+                    0
+                </Label>
+                <Label Grid.Row="4" Grid.Column="2" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center">
+                    0
+                </Label>
+                <Label Grid.Row="5" Grid.Column="2" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center">
+                    0
+                </Label>
+                <Label Grid.Row="6" Grid.Column="2" VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center">
+                    0
+                </Label>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
