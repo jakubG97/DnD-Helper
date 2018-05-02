@@ -63,8 +63,9 @@
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
-                    <ComboBox x:Name="className" />
+                <Grid Grid.Column="1">
+                    <ComboBox SelectedIndex="0" x:Name="className" DisplayMemberPath="nazwa" SelectedValuePath="id"
+                              SelectionChanged="className_SelectionChanged" />
                     <TextBlock IsHitTestVisible="False" Text="Klasa" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -80,8 +81,9 @@
                         </TextBlock.Style>
                     </TextBlock>
                 </Grid>
-                <Grid Grid.Column="1">
-                    <ComboBox x:Name="rassName" />
+                <Grid Grid.Column="0">
+                    <ComboBox SelectedIndex="0" x:Name="rassName" DisplayMemberPath="nazwa" SelectedValuePath="id"
+                              SelectionChanged="rassName_SelectionChanged" />
                     <TextBlock IsHitTestVisible="False" Text="Rasa" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -106,7 +108,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="0">
-                    <ComboBox x:Name="characterName" />
+                    <ComboBox x:Name="characterName" SelectedIndex="0" DisplayMemberPath="nazwa" SelectedValuePath="id" />
                     <TextBlock IsHitTestVisible="False" Text="Charakter" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -123,7 +125,7 @@
                     </TextBlock>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <ComboBox x:Name="deityName" />
+                    <ComboBox x:Name="deityName" SelectedIndex="0" DisplayMemberPath="nazwa" SelectedValuePath="id" />
                     <TextBlock IsHitTestVisible="False" Text="Bóstwo" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -149,27 +151,7 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
 
-                    <ComboBox x:Name="lvl">
-                        <ComboBoxItem >1</ComboBoxItem>
-                        <ComboBoxItem >2</ComboBoxItem>
-                        <ComboBoxItem >3</ComboBoxItem>
-                        <ComboBoxItem >4</ComboBoxItem>
-                        <ComboBoxItem >5</ComboBoxItem>
-                        <ComboBoxItem >6</ComboBoxItem>
-                        <ComboBoxItem >7</ComboBoxItem>
-                        <ComboBoxItem >8</ComboBoxItem>
-                        <ComboBoxItem >9</ComboBoxItem>
-                        <ComboBoxItem >10</ComboBoxItem>
-                        <ComboBoxItem >11</ComboBoxItem>
-                        <ComboBoxItem >12</ComboBoxItem>
-                        <ComboBoxItem >13</ComboBoxItem>
-                        <ComboBoxItem >14</ComboBoxItem>
-                        <ComboBoxItem >15</ComboBoxItem>
-                        <ComboBoxItem >16</ComboBoxItem>
-                        <ComboBoxItem >17</ComboBoxItem>
-                        <ComboBoxItem >18</ComboBoxItem>
-                        <ComboBoxItem >19</ComboBoxItem>
-                    </ComboBox>
+                    <ComboBox x:Name="lvl" SelectedIndex="0" DisplayMemberPath="lvl" SelectedValuePath="lvl" />
                     <TextBlock IsHitTestVisible="False" Text="Poziom" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -187,7 +169,7 @@
                 </Grid>
 
                 <Grid Grid.Column="1">
-                    <ComboBox x:Name="size" />
+                    <ComboBox x:Name="size" SelectedIndex="0" DisplayMemberPath="nazwa" SelectedValuePath="id"  />
                     <TextBlock IsHitTestVisible="False" Text="Rozmiar" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -204,7 +186,7 @@
                     </TextBlock>
                 </Grid>
                 <Grid Grid.Column="2">
-                    <TextBox PreviewTextInput="NumberValidationTextBox" VerticalContentAlignment="Center" x:Name="age" />
+                    <TextBox PreviewTextInput="NumberValidationTextBox" VerticalContentAlignment="Center" x:Name="age" TextChanged="age_TextChanged" />
                     <TextBlock IsHitTestVisible="False" Text="Wiek" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -221,10 +203,10 @@
                     </TextBlock>
                 </Grid>
                 <Grid Grid.Column="3">
-                    <ComboBox x:Name="sex" >
-                        <ComboBoxItem>M</ComboBoxItem>
+                    <ComboBox x:Name="sex">
+                        <ComboBoxItem >M</ComboBoxItem>
                         <ComboBoxItem>K</ComboBoxItem>
-                        </ComboBox>
+                    </ComboBox>
                     <TextBlock IsHitTestVisible="False" Text="Płeć" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -250,7 +232,7 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
                     <TextBox PreviewTextInput="NumberValidationTextBox" VerticalContentAlignment="Center"
-                             x:Name="height" />
+                             x:Name="height" TextChanged="height_TextChanged" />
                     <TextBlock IsHitTestVisible="False" Text="Wzrost" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -268,7 +250,7 @@
                 </Grid>
                 <Grid Grid.Column="1">
                     <TextBox PreviewTextInput="NumberValidationTextBox" VerticalContentAlignment="Center"
-                             x:Name="weight" />
+                             x:Name="weight" TextChanged="weight_TextChanged" />
                     <TextBlock IsHitTestVisible="False" Text="Waga" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -286,7 +268,7 @@
                 </Grid>
 
                 <Grid Grid.Column="2">
-                    <ComboBox x:Name="eyes" >
+                    <ComboBox x:Name="eyes">
                         <ComboBoxItem>Brązowe</ComboBoxItem>
                         <ComboBoxItem>Ciemnobrązowe</ComboBoxItem>
                         <ComboBoxItem>Piwne</ComboBoxItem>

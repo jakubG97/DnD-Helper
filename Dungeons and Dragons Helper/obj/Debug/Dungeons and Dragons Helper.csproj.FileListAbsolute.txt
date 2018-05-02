@@ -1,7 +1,6 @@
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\Dungeons and Dragons Helper.exe.config
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\Dungeons and Dragons Helper.exe
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\Dungeons and Dragons Helper.pdb
-C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\Dungeons and Dragons Helper.csprojResolveAssemblyReference.cache
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\MainWindow.g.cs
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\App.g.cs
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\Dungeons and Dragons Helper_MarkupCompile.cache
@@ -14,9 +13,17 @@ C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Hel
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\Dungeons and Dragons Helper.exe
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\Dungeons and Dragons Helper.pdb
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\Resources\DnD_Helper.sqlite
-C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\System.Data.SQLite.dll
-C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\System.Data.SQLite.xml
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\Dungeons and Dragons Helper.csproj.CopyComplete
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\log4net.dll
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\log4net.xml
 C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\Resources\2000px-D&d-3thedit-logo.svg.png
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\obj\Debug\Dungeons and Dragons Helper.csprojResolveAssemblyReference.cache
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\EntityFramework.dll
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\System.Data.SQLite.dll
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\EntityFramework.xml
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\System.Data.SQLite.xml
+C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\bin\Debug\System.Data.SQLite.dll.config
