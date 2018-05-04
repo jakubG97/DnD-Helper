@@ -169,7 +169,7 @@
                 </Grid>
 
                 <Grid Grid.Column="1">
-                    <ComboBox x:Name="size" SelectedIndex="0" DisplayMemberPath="nazwa" SelectedValuePath="id"  />
+                    <ComboBox x:Name="size" SelectedIndex="0" DisplayMemberPath="nazwa" SelectedValuePath="id" />
                     <TextBlock IsHitTestVisible="False" Text="Rozmiar" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -186,7 +186,8 @@
                     </TextBlock>
                 </Grid>
                 <Grid Grid.Column="2">
-                    <TextBox PreviewTextInput="NumberValidationTextBox" VerticalContentAlignment="Center" x:Name="age" TextChanged="age_TextChanged" />
+                    <TextBox PreviewTextInput="NumberValidationTextBox" VerticalContentAlignment="Center" x:Name="age"
+                             TextChanged="age_TextChanged" />
                     <TextBlock IsHitTestVisible="False" Text="Wiek" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -204,7 +205,7 @@
                 </Grid>
                 <Grid Grid.Column="3">
                     <ComboBox x:Name="sex">
-                        <ComboBoxItem >M</ComboBoxItem>
+                        <ComboBoxItem>M</ComboBoxItem>
                         <ComboBoxItem>K</ComboBoxItem>
                     </ComboBox>
                     <TextBlock IsHitTestVisible="False" Text="Płeć" Foreground="Gray" FontWeight="Bold"
@@ -325,9 +326,8 @@
         </Grid>
         <Grid Grid.Row="1" Grid.Column="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="146*" />
-                <ColumnDefinition Width="372*" />
-                <ColumnDefinition Width="259*" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
@@ -414,6 +414,162 @@
                     0
                 </Label>
             </Grid>
+            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1,0,0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center"
+                           HorizontalContentAlignment="Center" FontSize="9" FontWeight="Bold">
+                        SUMA
+                    </Label>
+                    <Label Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center"
+                           VerticalContentAlignment="Center" Content="PW" ToolTip="Punkty wytrzymałości" />
+                    <Label Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center"
+                           VerticalContentAlignment="Center" Content="KP" ToolTip="Klasa pancerza" />
+                    <TextBox Grid.Column="1" Grid.Row="1" PreviewTextInput="NumberValidationTextBox"
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="PwSum"
+                             IsEnabled="False" Text="0" ToolTip="Suma" />
+
+
+                    <TextBox Grid.Column="1" Grid.Row="2" PreviewTextInput="NumberValidationTextBox"
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="KpSum"
+                             IsEnabled="False" Text="0" ToolTip="Suma" />
+                    <Label Grid.Row="3" Grid.Column="0" HorizontalContentAlignment="Center"
+                           VerticalContentAlignment="Center" Content="Inicjatywa" ToolTip="Modyfikator" />
+
+                    <TextBox Grid.Column="1" Grid.Row="3" PreviewTextInput="NumberValidationTextBox"
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                             x:Name="InicjatywaSum"
+                             IsEnabled="False" Text="0" ToolTip="Suma" />
+                    <Label Grid.Row="3" Grid.Column="2" HorizontalContentAlignment="Center"
+                           VerticalContentAlignment="Center" Content="=" />
+                    <TextBox ToolTipService.ShowOnDisabled="True" Grid.Column="3" Grid.Row="3"
+                             PreviewTextInput="NumberValidationTextBox"
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                             x:Name="ModyfZrecz2"
+                             ToolTip="Modyfikator ze zręczności"
+                             IsEnabled="False" Text="0" />
+                    <Grid Grid.Row="3" Grid.Column="4" ToolTip="Rozmaite modyfikatory">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                               Content="+" />
+                        <TextBox Grid.Column="1" PreviewTextInput="NumberValidationTextBox"
+                                 VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                                 x:Name="ModyfRozmaite1"
+                                 ToolTip="Rozmaite modyfikatory"
+                                 IsEnabled="False" Text="0" />
+                    </Grid>
+
+
+                    <Label Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Center"
+                           VerticalContentAlignment="Center" Content="=10" />
+                    <Grid Grid.Row="2" Grid.Column="3" ToolTip="Premia z pancerza">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                               Content="+" />
+                        <TextBox Grid.Column="1" PreviewTextInput="NumberValidationTextBox"
+                                 VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                                 x:Name="PremiaZPancerza" ToolTip="Premia z pancerza" />
+
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="4" ToolTip="Premia z tarczy">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                               Content="+" />
+                        <TextBox Grid.Column="1" PreviewTextInput="NumberValidationTextBox"
+                                 VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                                 x:Name="PremiaZTarczy" />
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="5" ToolTip="Modyfikator ze zręczności">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                               Content="+" />
+                        <TextBox Grid.Column="1" PreviewTextInput="NumberValidationTextBox"
+                                 VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                                 x:Name="ModyfZrecz1" />
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="5" ToolTip="Modyfikator z rozmiaru">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                               Content="+" />
+                        <TextBox Grid.Column="1" PreviewTextInput="NumberValidationTextBox"
+                                 VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                                 x:Name="ModyfRozm1"
+                                 IsEnabled="False" />
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="6" ToolTip="Rozmaite modyfikatory">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                               Content="+" />
+                        <TextBox Grid.Column="1" PreviewTextInput="NumberValidationTextBox"
+                                 VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                                 x:Name="ModyfRozmaite2"
+                                 IsEnabled="False" />
+                    </Grid>
+                    <Grid Grid.Column="7" Grid.Row="2" Width="10px"></Grid>
+
+                    <TextBox ToolTipService.ShowOnDisabled="True" Grid.Row="2" Grid.Column="8"
+                             PreviewTextInput="NumberValidationTextBox"
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                             x:Name="NiepowodzenieCzaruWtajemniczen" ToolTip="Niepowodzenie czaru wtajemniczeń"
+                             IsEnabled="False" />
+                    <TextBox ToolTipService.ShowOnDisabled="True" Grid.Row="2" Grid.Column="9"
+                             PreviewTextInput="NumberValidationTextBox"
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                             x:Name="KaraDoTestuZPancerza" ToolTip="Kara do testu z pancerza"
+                             IsEnabled="False" />
+                    <TextBox ToolTipService.ShowOnDisabled="True" Grid.Row="2" Grid.Column="10"
+                             PreviewTextInput="NumberValidationTextBox"
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                             x:Name="Szybkosc" ToolTip="Szybkość"
+                             IsEnabled="False" />
+                    <Label Grid.Row="4" Grid.Column="0" HorizontalContentAlignment="Center" 
+                           VerticalContentAlignment="Center" ToolTip="Modyfikator" >
+                        <TextBlock>Bazowy<LineBreak/>atak</TextBlock></Label>
+                    <TextBox ToolTipService.ShowOnDisabled="True" Grid.Row="4" Grid.Column="1"
+                             PreviewTextInput="NumberValidationTextBox"
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                             x:Name="BazowyAtak" ToolTip="Bazowy atak - Premia"
+                             IsEnabled="False" Text="0" />
+                </Grid>
+            </Border>
         </Grid>
     </Grid>
 </Window>

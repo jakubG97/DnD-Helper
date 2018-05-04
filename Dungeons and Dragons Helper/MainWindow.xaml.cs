@@ -100,7 +100,7 @@ namespace Dungeons_and_Dragons_Helper
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]+");
+            Regex regex = new Regex("^[^0-9]+$");
             e.Handled = regex.IsMatch(e.Text);
         }
 
@@ -120,7 +120,7 @@ namespace Dungeons_and_Dragons_Helper
 
         private void age_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var value = age.Text;
+            var value = age.Text.Trim();
             if (value.Equals(""))
             {
                 value = "1";
@@ -143,7 +143,7 @@ namespace Dungeons_and_Dragons_Helper
 
         private void height_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var value = height.Text;
+            var value = height.Text.Trim();
             if (value.Equals(""))
             {
                 value = "1";
@@ -166,7 +166,7 @@ namespace Dungeons_and_Dragons_Helper
 
         private void weight_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var value = weight.Text;
+            var value = weight.Text.Trim();
             if (value.Equals(""))
             {
                 value = "1";
@@ -186,5 +186,7 @@ namespace Dungeons_and_Dragons_Helper
                 weight.CaretIndex = weight.Text.Length;
             }
         }
+
+       
     }
 }

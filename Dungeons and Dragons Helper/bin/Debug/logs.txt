@@ -1,16 +1,7 @@
-﻿2018-05-02 16:41:03,171 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
-2018-05-02 16:41:03,514 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
-2018-05-02 16:41:03,557 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
-2018-05-02 16:41:42,351 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
-2018-05-02 16:41:42,651 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
-2018-05-02 16:41:42,669 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
-2018-05-02 16:44:09,817 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
-2018-05-02 16:44:10,261 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
-2018-05-02 16:44:10,284 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
-2018-05-02 16:44:48,133 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
-2018-05-02 16:44:48,442 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
-2018-05-02 16:44:48,468 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
-2018-05-02 16:45:02,844 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+﻿2018-05-04 20:33:43,587 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 20:33:44,011 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 20:33:44,058 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 20:33:44,343 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
 near ";": syntax error
    w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
    w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
@@ -26,7 +17,7 @@ near ";": syntax error
    w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
    w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
    w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
-2018-05-02 16:45:02,872 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+2018-05-04 20:33:44,374 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
 near ";": syntax error
    w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
    w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
@@ -42,10 +33,10 @@ near ";": syntax error
    w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
    w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
    w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
-2018-05-02 16:46:34,305 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
-2018-05-02 16:46:34,553 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
-2018-05-02 16:46:34,573 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
-2018-05-02 16:46:34,701 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+2018-05-04 20:34:05,383 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 20:34:05,675 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 20:34:05,700 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 20:34:05,954 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
 near ";": syntax error
    w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
    w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
@@ -61,7 +52,1010 @@ near ";": syntax error
    w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
    w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
    w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
-2018-05-02 16:46:34,740 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+2018-05-04 20:34:05,990 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 20:36:07,667 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 20:36:07,998 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 20:36:08,020 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 20:36:08,266 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 20:36:08,300 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 20:37:54,174 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 20:37:54,520 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 20:37:54,545 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 20:37:54,801 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 20:37:54,834 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 20:39:26,657 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 20:39:26,963 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 20:39:26,982 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 20:39:27,253 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 20:39:27,285 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 20:43:21,171 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 20:43:21,441 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 20:43:21,460 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 20:43:21,715 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 20:43:21,748 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:04:07,837 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:04:08,182 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:04:08,201 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:04:08,350 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:04:08,379 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:05:08,394 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:05:08,689 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:05:08,713 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:05:08,851 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:05:08,878 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:08:28,204 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:08:28,497 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:08:28,522 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:08:28,687 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:08:28,734 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:10:09,692 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:10:09,960 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:10:09,979 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:10:10,141 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:10:10,174 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:11:08,481 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:11:08,757 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:11:08,778 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:11:08,933 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:11:08,962 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:18:21,269 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:18:21,573 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:18:21,600 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:18:21,780 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:18:21,810 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:19:04,291 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:19:04,588 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:19:04,606 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:19:04,757 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:19:04,796 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:19:28,336 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:19:28,619 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:19:28,640 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:19:28,791 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:19:28,817 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:20:09,523 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:20:09,800 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:20:09,819 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:20:09,995 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:20:10,031 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:21:53,154 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:21:53,507 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:21:53,525 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:21:53,695 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:21:53,741 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:22:03,702 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:22:03,969 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:22:03,990 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:22:04,131 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:22:04,163 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:22:20,866 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:22:21,162 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:22:21,185 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:22:30,451 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:22:30,478 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:23:11,563 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:23:11,844 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:23:11,863 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:23:14,758 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:23:14,785 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:24:37,802 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:24:38,081 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:24:38,102 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:25:00,942 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:25:01,227 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:25:01,245 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:27:51,383 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:27:51,662 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:27:51,683 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:27:56,259 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:27:56,304 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:27:56,327 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:27:56,350 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:30:01,184 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:30:01,506 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:30:01,528 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:30:01,726 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:30:01,773 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:30:01,804 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:30:01,828 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:30:27,028 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:30:27,303 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:30:27,327 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:30:27,523 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:30:27,584 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:30:27,607 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:30:27,631 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:33:42,600 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:33:42,966 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:33:42,988 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:33:43,190 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:33:43,246 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:33:43,289 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:33:43,332 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:34:22,941 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:34:23,509 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:34:23,527 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:34:23,704 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:34:23,761 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:34:23,802 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:34:23,827 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:37:05,387 INFO [1] Dungeons_and_Dragons_Helper.MainWindow..ctor - =======================Otwieranie nowej instancji =======================
+2018-05-04 21:37:05,733 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwieranie połączenia z bazą danych...
+2018-05-04 21:37:05,754 INFO [1] Dungeons_and_Dragons_Helper.Utilities.SqLiteUtil.InitializeConnection - Otwarto pomyślnie
+2018-05-04 21:37:05,953 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:37:06,002 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:37:06,041 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+near ";": syntax error
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   w System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   w System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, IEnumerable`1 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 108
+   w System.Data.SQLite.SQLiteHelper.Select(String sql, Dictionary`2 dicParameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\SQLite\SQLiteHelper.cs:wiersz 93
+   w Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable(String table, Dictionary`2 parameters) w C:\Users\jakub\source\repos\Dungeons and Dragons Helper\Dungeons and Dragons Helper\Utilities\MainUtility.cs:wiersz 46
+2018-05-04 21:37:06,081 ERROR [1] Dungeons_and_Dragons_Helper.Utilities.MainUtility.GetAllFromTable - code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
 near ";": syntax error
    w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
    w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
