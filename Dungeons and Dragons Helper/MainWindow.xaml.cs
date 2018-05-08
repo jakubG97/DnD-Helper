@@ -116,6 +116,7 @@ namespace Dungeons_and_Dragons_Helper
             age_TextChanged(null, null);
             height_TextChanged(null, null);
             weight_TextChanged(null, null);
+            RecalculateSize();
         }
 
         private void age_TextChanged(object sender, TextChangedEventArgs e)
@@ -187,6 +188,79 @@ namespace Dungeons_and_Dragons_Helper
             }
         }
 
-       
+        private void AttributesTextField_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            RecalculateAttributes();
+        }
+
+        private void RecalculateAttributes()
+        {
+            var attributes = Util.GetAllAttributes();
+            foreach (var i in Enumerable.Range(1, 6))
+            {
+                GetAttributeModificatorTextFieldById(i).Content = "0";
+            }
+
+            foreach (DataRow attribute in attributes.Rows)
+            {
+                var attributeTextField = GetAttributeTextFieldById((Int64) attribute["atrybut_id"]);
+                var modificatorTextField = GetAttributeModificatorTextFieldById((Int64) attribute["atrybut_id"]);
+                var enteredText = attributeTextField.Text == "" ? "0" : attributeTextField.Text;
+                if (Int64.Parse(enteredText) == (Int64) attribute["wartosc"])
+                {
+                    modificatorTextField.Content = ((Int64) attribute["modyfikator"]).ToString();
+                }
+            }
+        }
+
+        private Label GetAttributeModificatorTextFieldById(Int64 id)
+        {
+            switch (id)
+            {
+                case 1: return StrengthModificatorValue;
+                case 2: return SkillModificatorValue;
+                case 3: return BuildModificatorValue;
+                case 4: return IntellectModificatorValue;
+                case 5: return CautionModificatorValue;
+                case 6: return CharismaModificatorValue;
+            }
+
+            return null;
+        }
+
+        private TextBox GetAttributeTextFieldById(Int64 id)
+        {
+            switch (id)
+            {
+                case 1: return StrengthValue;
+                case 2: return SkillValue;
+                case 3: return BuildValue;
+                case 4: return IntellectValue;
+                case 5: return CautionValue;
+                case 6: return CharismaValue;
+            }
+
+            return null;
+        }
+
+        private void KP_Recalculate(object sender, TextChangedEventArgs e)
+        {
+            var PremiaZPancerzaInteger = Int32.Parse(PremiaZPancerza.Text == "" ? "0" : PremiaZPancerza.Text);
+            var PremiaZTarczyInteger = Int32.Parse(PremiaZTarczy.Text == "" ? "0" : PremiaZTarczy.Text);
+            var ModyfRozm1Integer = Int32.Parse(ModyfRozm1.Text == "" ? "0" : ModyfRozm1.Text);
+            var ModyfRozmaite2Integer = Int32.Parse(ModyfRozmaite2.Text == "" ? "0" : ModyfRozmaite2.Text);
+            KpSum.Text = (10 + PremiaZPancerzaInteger + PremiaZTarczyInteger + ModyfRozm1Integer + ModyfRozmaite2Integer).ToString();
+        }
+
+        private void size_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RecalculateSize();
+        }
+
+        private void RecalculateSize()
+        {
+            var baseSize = (Int64)(((DataRowView)rassName.SelectedItem)["rozmiar_bazowy"] ?? 0);
+            ModyfRozm1.Text = baseSize.ToString();
+        }
     }
 }

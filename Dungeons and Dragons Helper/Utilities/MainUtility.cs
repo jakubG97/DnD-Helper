@@ -53,5 +53,25 @@ namespace Dungeons_and_Dragons_Helper.Utilities
 
             return null;
         }
+        public DataTable GetAllAttributes()
+        {
+            try
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand())
+                {
+                    cmd.Connection = SQL.dbConnection;
+                    SQLiteHelper sh = new SQLiteHelper(cmd);
+                    String query = $"SELECT atrybut_id,wartosc,modyfikator,nazwa FROM atrybuty_wartosci JOIN atrybuty a on atrybuty_wartosci.atrybut_id = a.id";
+                    query += ";";
+                    return sh.Select(query);
+                }
+            }
+            catch (Exception e)
+            {
+                Log.Error(e);
+            }
+
+            return null;
+        }
     }
 }

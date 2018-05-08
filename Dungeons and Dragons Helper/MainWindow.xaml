@@ -169,7 +169,7 @@
                 </Grid>
 
                 <Grid Grid.Column="1">
-                    <ComboBox x:Name="size" SelectedIndex="0" DisplayMemberPath="nazwa" SelectedValuePath="id" />
+                    <ComboBox x:Name="size" SelectedIndex="0" DisplayMemberPath="nazwa" SelectedValuePath="id" SelectionChanged="size_SelectionChanged" />
                     <TextBlock IsHitTestVisible="False" Text="Rozmiar" Foreground="Gray" FontWeight="Bold"
                                Margin="5,0,0,0"
                                VerticalAlignment="Center">
@@ -374,42 +374,49 @@
                     Wartość
                 </Label>
                 <TextBox Grid.Column="1" Grid.Row="1" PreviewTextInput="NumberValidationTextBox"
-                         VerticalContentAlignment="Center" x:Name="StrengthValue" />
+                         VerticalContentAlignment="Center" x:Name="StrengthValue"
+                         TextChanged="AttributesTextField_TextChanged" />
                 <TextBox Grid.Column="1" Grid.Row="2" PreviewTextInput="NumberValidationTextBox"
-                         VerticalContentAlignment="Center" x:Name="SkillValue" />
+                         VerticalContentAlignment="Center" x:Name="SkillValue"
+                         TextChanged="AttributesTextField_TextChanged" />
                 <TextBox Grid.Column="1" Grid.Row="3" PreviewTextInput="NumberValidationTextBox"
-                         VerticalContentAlignment="Center" x:Name="BuildValue" />
+                         VerticalContentAlignment="Center" x:Name="BuildValue"
+                         TextChanged="AttributesTextField_TextChanged" />
                 <TextBox Grid.Column="1" Grid.Row="4" PreviewTextInput="NumberValidationTextBox"
-                         VerticalContentAlignment="Center" x:Name="IntellectValue" />
+                         VerticalContentAlignment="Center" x:Name="IntellectValue"
+                         TextChanged="AttributesTextField_TextChanged" />
                 <TextBox Grid.Column="1" Grid.Row="5" PreviewTextInput="NumberValidationTextBox"
-                         VerticalContentAlignment="Center" x:Name="CautionValue" />
+                         VerticalContentAlignment="Center" x:Name="CautionValue"
+                         TextChanged="AttributesTextField_TextChanged" />
                 <TextBox Grid.Column="1" Grid.Row="6" PreviewTextInput="NumberValidationTextBox"
-                         VerticalContentAlignment="Center" x:Name="CharismaValue" />
+                         VerticalContentAlignment="Center" x:Name="CharismaValue"
+                         TextChanged="AttributesTextField_TextChanged" />
                 <Label Grid.Row="0" Grid.Column="2" VerticalContentAlignment="Center"
                        HorizontalContentAlignment="Center" FontSize="9">
                     Modyfikator
                 </Label>
-                <Label Grid.Row="1" Grid.Column="2" VerticalContentAlignment="Center"
+                <Label Grid.Row="1" Grid.Column="2" VerticalContentAlignment="Center" x:Name="StrengthModificatorValue"
                        HorizontalContentAlignment="Center">
                     0
                 </Label>
-                <Label Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Center"
+                <Label Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Center" x:Name="SkillModificatorValue"
                        HorizontalContentAlignment="Center">
                     0
                 </Label>
-                <Label Grid.Row="3" Grid.Column="2" VerticalContentAlignment="Center"
+                <Label Grid.Row="3" Grid.Column="2" VerticalContentAlignment="Center" x:Name="BuildModificatorValue"
                        HorizontalContentAlignment="Center">
                     0
                 </Label>
                 <Label Grid.Row="4" Grid.Column="2" VerticalContentAlignment="Center"
+                       x:Name="IntellectModificatorValue"
                        HorizontalContentAlignment="Center">
                     0
                 </Label>
-                <Label Grid.Row="5" Grid.Column="2" VerticalContentAlignment="Center"
+                <Label Grid.Row="5" Grid.Column="2" VerticalContentAlignment="Center" x:Name="CautionModificatorValue"
                        HorizontalContentAlignment="Center">
                     0
                 </Label>
-                <Label Grid.Row="6" Grid.Column="2" VerticalContentAlignment="Center"
+                <Label Grid.Row="6" Grid.Column="2" VerticalContentAlignment="Center" x:Name="CharismaModificatorValue"
                        HorizontalContentAlignment="Center">
                     0
                 </Label>
@@ -494,7 +501,7 @@
                                Content="+" />
                         <TextBox Grid.Column="1" PreviewTextInput="NumberValidationTextBox"
                                  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                                 x:Name="PremiaZPancerza" ToolTip="Premia z pancerza" />
+                                 x:Name="PremiaZPancerza" ToolTip="Premia z pancerza" TextChanged="KP_Recalculate" />
 
                     </Grid>
                     <Grid Grid.Row="2" Grid.Column="4" ToolTip="Premia z tarczy">
@@ -506,7 +513,7 @@
                                Content="+" />
                         <TextBox Grid.Column="1" PreviewTextInput="NumberValidationTextBox"
                                  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                                 x:Name="PremiaZTarczy" />
+                                 x:Name="PremiaZTarczy" TextChanged="KP_Recalculate" />
                     </Grid>
                     <Grid Grid.Row="2" Grid.Column="5" ToolTip="Modyfikator ze zręczności">
                         <Grid.ColumnDefinitions>
@@ -529,7 +536,7 @@
                         <TextBox Grid.Column="1" PreviewTextInput="NumberValidationTextBox"
                                  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                                  x:Name="ModyfRozm1"
-                                 IsEnabled="False" />
+                                 IsEnabled="False" TextChanged="KP_Recalculate" />
                     </Grid>
                     <Grid Grid.Row="2" Grid.Column="6" ToolTip="Rozmaite modyfikatory">
                         <Grid.ColumnDefinitions>
@@ -541,9 +548,9 @@
                         <TextBox Grid.Column="1" PreviewTextInput="NumberValidationTextBox"
                                  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                                  x:Name="ModyfRozmaite2"
-                                 IsEnabled="False" />
+                                 IsEnabled="False" TextChanged="KP_Recalculate" />
                     </Grid>
-                    <Grid Grid.Column="7" Grid.Row="2" Width="10px"></Grid>
+                    <Grid Grid.Column="7" Grid.Row="2" Width="10px" />
 
                     <TextBox ToolTipService.ShowOnDisabled="True" Grid.Row="2" Grid.Column="8"
                              PreviewTextInput="NumberValidationTextBox"
@@ -560,9 +567,10 @@
                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                              x:Name="Szybkosc" ToolTip="Szybkość"
                              IsEnabled="False" />
-                    <Label Grid.Row="4" Grid.Column="0" HorizontalContentAlignment="Center" 
-                           VerticalContentAlignment="Center" ToolTip="Modyfikator" >
-                        <TextBlock>Bazowy<LineBreak/>atak</TextBlock></Label>
+                    <Label Grid.Row="4" Grid.Column="0" HorizontalContentAlignment="Center"
+                           VerticalContentAlignment="Center" ToolTip="Modyfikator">
+                        <TextBlock>Bazowy<LineBreak />atak</TextBlock>
+                    </Label>
                     <TextBox ToolTipService.ShowOnDisabled="True" Grid.Row="4" Grid.Column="1"
                              PreviewTextInput="NumberValidationTextBox"
                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
