@@ -211,6 +211,13 @@ namespace Dungeons_and_Dragons_Helper
                     modificatorTextField.Content = ((Int64) attribute["modyfikator"]).ToString();
                 }
             }
+
+            SpreadRecalculatedAttributes();
+        }
+
+        private void SpreadRecalculatedAttributes()
+        {
+            ModyfZrecz2.Text = GetAttributeModificatorTextFieldById(2).Content.ToString();
         }
 
         private Label GetAttributeModificatorTextFieldById(Int64 id)
@@ -259,8 +266,29 @@ namespace Dungeons_and_Dragons_Helper
 
         private void RecalculateSize()
         {
-            var baseSize = (Int64)(((DataRowView)rassName.SelectedItem)["rozmiar_bazowy"] ?? 0);
-            ModyfRozm1.Text = baseSize.ToString();
+            try
+            {
+                var baseSize = (Int64) (((DataRowView) rassName.SelectedItem)["rozmiar_bazowy"] ?? 0);
+                ModyfRozm1.Text = baseSize.ToString();
+            }
+            catch (Exception e)
+            {
+                ModyfRozm1.Text = "0";
+            }
+        }
+
+        private void RecalculateInicjatywa(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                var ModyfZrecz2Integer = Int32.Parse(ModyfZrecz2.Text == "" ? "0" : ModyfZrecz2.Text);
+                var ModyfRozmaite1Integer = Int32.Parse(ModyfRozmaite1.Text == "" ? "0" : ModyfRozmaite1.Text);
+                InicjatywaSum.Text = (ModyfRozmaite1Integer + ModyfZrecz2Integer).ToString();
+            }
+            catch (Exception ignored)
+            {
+
+            }
         }
     }
 }

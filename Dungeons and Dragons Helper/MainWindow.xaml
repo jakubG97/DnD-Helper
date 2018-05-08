@@ -474,7 +474,7 @@
                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                              x:Name="ModyfZrecz2"
                              ToolTip="Modyfikator ze zręczności"
-                             IsEnabled="False" Text="0" />
+                             IsEnabled="False" Text="0" TextChanged="RecalculateInicjatywa" />
                     <Grid Grid.Row="3" Grid.Column="4" ToolTip="Rozmaite modyfikatory">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto" />
@@ -486,7 +486,7 @@
                                  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                                  x:Name="ModyfRozmaite1"
                                  ToolTip="Rozmaite modyfikatory"
-                                 IsEnabled="False" Text="0" />
+                                 IsEnabled="False" Text="0" TextChanged="RecalculateInicjatywa" />
                     </Grid>
 
 
