@@ -80,6 +80,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\Rasa.cs" />
+    <Compile Include="Rozmiar.cs" />
     <Compile Include="Utilities\MainUtility.cs" />
     <Compile Include="Utilities\SqLiteUtil.cs" />
     <Compile Include="Utilities\SQLite\SQLiteColumn.cs" />

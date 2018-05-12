@@ -38,7 +38,7 @@ namespace Dungeons_and_Dragons_Helper.Utilities
                             query += $" {keyValuePair.Key} = {keyValuePair.Value}";
                             if (parameters.Last().Key != keyValuePair.Key)
                             {
-                                query += "AND";
+                                query += " AND";
                             }
                         }
                     }
