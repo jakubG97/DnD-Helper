@@ -1,32 +1,17 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Dungeons_and_Dragons_Helper.Models;
 using Dungeons_and_Dragons_Helper.Utilities;
 using log4net;
-using log4net.Repository.Hierarchy;
 
 namespace Dungeons_and_Dragons_Helper
 {
-    /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private static readonly ILog Log =
@@ -37,7 +22,7 @@ namespace Dungeons_and_Dragons_Helper
 
         public MainWindow()
         {
-            Log.Info("=======================Otwieranie nowej instancji =======================");
+            Log.Info("======================= Otwieranie nowej instancji =======================");
             InitializeComponent();
             SQL = new SqLiteUtil();
             Util = new MainUtility(SQL);
@@ -124,6 +109,28 @@ namespace Dungeons_and_Dragons_Helper
             LoadDeity();
             LoadRzutyObronne();
             LoadAtak();
+            LoadBron();
+        }
+
+        private void LoadBron()
+        {
+            try
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand())
+                {
+                    cmd.Connection = Util.SQL.dbConnection;
+                    SQLiteHelper sh = new SQLiteHelper(cmd);
+                    String query =
+                        $"SELECT bron.*,r.nazwa as 'rodzaj_nazwa' FROM bron JOIN rodzaj r on bron.rodzaj_id = r.id WHERE klasa_id = {className.SelectedValue ?? 0};";
+                    var ret = sh.Select(query, new Dictionary<string, object>());
+                    ret?.DefaultView.AddNew();
+                    Bron1.ItemsSource = ret?.DefaultView;
+                }
+            }
+
+            catch (Exception)
+            {
+            }
         }
 
         private void LoadAtak()
@@ -174,7 +181,11 @@ namespace Dungeons_and_Dragons_Helper
                 else
                 {
                     var rzuty_obronne = Util.GetAllFromTable("rzuty_obronne",
-                        new Dictionary<string, object>() {{"klasa_id", className.SelectedValue}});
+                        new Dictionary<string, object>()
+                        {
+                            {"klasa_id", className.SelectedValue},
+                            {"poziom", lvl.SelectedIndex + 1}
+                        });
                     foreach (DataRow dataRow in rzuty_obronne.Rows)
                     {
                         if ((string) dataRow["nazwa"] == "Wytrwałość")
@@ -279,7 +290,30 @@ namespace Dungeons_and_Dragons_Helper
 
         private void AttributesTextField_TextChanged(object sender, TextChangedEventArgs e)
         {
+            ForceAttributeSize((TextBox) sender);
             RecalculateAttributes();
+        }
+
+        private void ForceAttributeSize(TextBox input)
+        {
+            var value = input.Text.Trim();
+            if (value.Equals(""))
+            {
+                value = "1";
+            }
+
+            var intVal = Int64.Parse(value);
+            if (intVal > 25)
+            {
+                input.Text = "25";
+                input.CaretIndex = input.Text.Length;
+            }
+
+            if (intVal < 1)
+            {
+                input.Text = "1";
+                input.CaretIndex = input.Text.Length;
+            }
         }
 
         private void RecalculateAttributes()
@@ -482,6 +516,52 @@ namespace Dungeons_and_Dragons_Helper
         private void Lvl_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             LoadAtak();
+        }
+
+        private void Bron_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var comboBox = (ComboBox) sender;
+            var currentItem = ((ComboBox) sender).SelectedItem;
+            if (currentItem != null)
+            {
+                try
+                {
+                    GetControlByName<TextBox>(comboBox.Name + "PremiaDoAtaku").Text =
+                        ((Int64) (((DataRowView) currentItem)["premia_do_ataku"] ?? 0)).ToString();
+                    GetControlByName<TextBox>(comboBox.Name + "Obrazenia").Text =
+                        ((Int64) (((DataRowView) currentItem)["obrazenia"] ?? 0)).ToString();
+                    GetControlByName<TextBox>(comboBox.Name + "Krytyk").Text =
+                        ((Int64) (((DataRowView) currentItem)["krytyk"] ?? 0)).ToString();
+                    GetControlByName<TextBox>(comboBox.Name + "Zasieg").Text =
+                        ((Int64) (((DataRowView) currentItem)["zasieg"] ?? 0)).ToString();
+                    GetControlByName<TextBox>(comboBox.Name + "Rodzaj").Text =
+                        (String) (((DataRowView) currentItem)["rodzaj_nazwa"] ?? "");
+                }
+                catch (Exception)
+                {
+                    ClearBron(comboBox.Name);
+                }
+            }
+            else
+            {
+                ClearBron(comboBox.Name);
+            }
+        }
+
+        private void ClearBron(string index)
+        {
+            GetControlByName<TextBox>(index + "PremiaDoAtaku").Text = "0";
+            GetControlByName<TextBox>(index + "Obrazenia").Text = "0";
+            GetControlByName<TextBox>(index + "Krytyk").Text = "0";
+            GetControlByName<TextBox>(index + "Zasieg").Text = "0";
+            GetControlByName<TextBox>(index + "Rodzaj").Text = "";
+            GetControlByName<TextBox>(index + "Specjalne").Text = "";
+        }
+
+        private T GetControlByName<T>(string name)
+        {
+            T obj = (T) FindName(name);
+            return obj;
         }
     }
 }
