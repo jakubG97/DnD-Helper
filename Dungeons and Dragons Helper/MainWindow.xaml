@@ -18,6 +18,7 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="319*" />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Grid.ColumnSpan="2">
@@ -881,6 +882,7 @@
         <Grid Grid.Row="4" Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -888,9 +890,9 @@
             </Grid.RowDefinitions>
 
             <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold">BROŃ</Label>
-            <Grid Grid.Row="1">
+            <Label Grid.Column="0" Grid.Row="1" FontSize="10">Do walki wręcz</Label>
+            <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -899,7 +901,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <ComboBox SelectedIndex="-1" x:Name="Bron1" DisplayMemberPath="nazwa" SelectedValuePath="id"
-                          ToolTip="Broń 1" Grid.Column="0" SelectionChanged="Bron_SelectionChanged" />
+                          ToolTip="Broń 1" Grid.Column="0" SelectionChanged="BronWrecz_SelectionChanged" />
                 <Grid Grid.Column="1" ToolTip="Suma premii do ataku">
                     <TextBox PreviewTextInput="NumberValidationTextBox"
                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
@@ -917,23 +919,17 @@
                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron1Krytyk"
                              IsEnabled="False" Text="0" />
                 </Grid>
-                <Grid ToolTip="Zasięg" Grid.Column="4">
-                    <TextBox PreviewTextInput="NumberValidationTextBox"
-                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron1Zasieg"
-                             IsEnabled="False" Text="0" />
-                </Grid>
-                <Grid ToolTip="Rodzaj" Grid.Column="5">
+                <Grid ToolTip="Kategoria" Grid.Column="4">
                     <TextBox
-                        VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron1Rodzaj"
+                        VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron1Kategoria"
                         IsEnabled="False" />
                 </Grid>
-                <TextBox Grid.Column="6" ToolTip="Specjalne właściwości"
+                <TextBox Grid.Column="5" ToolTip="Specjalne właściwości"
                     VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron1Specjalne" />
             </Grid>
 
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="3">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -942,7 +938,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <ComboBox SelectedIndex="-1" x:Name="Bron2" DisplayMemberPath="nazwa" SelectedValuePath="id"
-                          ToolTip="Broń 1" Grid.Column="0" SelectionChanged="Bron_SelectionChanged" />
+                          ToolTip="Broń 1" Grid.Column="0" SelectionChanged="BronWrecz_SelectionChanged" />
                 <Grid Grid.Column="1" ToolTip="Suma premii do ataku">
                     <TextBox PreviewTextInput="NumberValidationTextBox"
                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
@@ -960,24 +956,19 @@
                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron2Krytyk"
                              IsEnabled="False" Text="0" />
                 </Grid>
-                <Grid ToolTip="Zasięg" Grid.Column="4">
-                    <TextBox PreviewTextInput="NumberValidationTextBox"
-                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron2Zasieg"
-                             IsEnabled="False" Text="0" />
-                </Grid>
-                <Grid ToolTip="Rodzaj" Grid.Column="5">
+                <Grid ToolTip="Kategoria" Grid.Column="4">
                     <TextBox
-                        VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron2Rodzaj"
+                        VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron2Kategoria"
                         IsEnabled="False" />
                 </Grid>
-                <TextBox Grid.Column="6" ToolTip="Specjalne właściwości"
+                <TextBox Grid.Column="5" ToolTip="Specjalne właściwości"
                     VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron2Specjalne" />
             </Grid>
 
+            <Label Grid.Column="0" Grid.Row="4" FontSize="10">Do walki dystansowej</Label>
 
-            <Grid Grid.Row="3">
+            <Grid Grid.Row="5">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -986,7 +977,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <ComboBox SelectedIndex="-1" x:Name="Bron3" DisplayMemberPath="nazwa" SelectedValuePath="id"
-                          ToolTip="Broń 1" Grid.Column="0" SelectionChanged="Bron_SelectionChanged" />
+                          ToolTip="Broń 1" Grid.Column="0" SelectionChanged="Bron3_OnSelectionChanged" />
                 <Grid Grid.Column="1" ToolTip="Suma premii do ataku">
                     <TextBox PreviewTextInput="NumberValidationTextBox"
                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
@@ -1004,62 +995,75 @@
                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron3Krytyk"
                              IsEnabled="False" Text="0" />
                 </Grid>
-                <Grid ToolTip="Zasięg" Grid.Column="4">
-                    <TextBox PreviewTextInput="NumberValidationTextBox"
-                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron3Zasieg"
-                             IsEnabled="False" Text="0" />
-                </Grid>
-                <Grid ToolTip="Rodzaj" Grid.Column="5">
+                <Grid ToolTip="Kategoria" Grid.Column="4">
                     <TextBox
-                        VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron3Rodzaj"
+                        VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron3Kategoria"
                         IsEnabled="False" />
                 </Grid>
-                <TextBox Grid.Column="6" ToolTip="Specjalne właściwości"
+                <TextBox Grid.Column="5" ToolTip="Specjalne właściwości"
                     VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron3Specjalne" />
             </Grid>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-            <Grid Grid.Row="4">
+            <Label Grid.Column="0" Grid.Row="0" FontWeight="Bold">Pancerz/Tarcza</Label>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <ComboBox SelectedIndex="-1" x:Name="Bron4" DisplayMemberPath="nazwa" SelectedValuePath="id"
-                          ToolTip="Broń 1" Grid.Column="0" SelectionChanged="Bron_SelectionChanged" />
-                <Grid Grid.Column="1" ToolTip="Suma premii do ataku">
+                <ComboBox SelectedIndex="-1" x:Name="Pancerz" DisplayMemberPath="nazwa" SelectedValuePath="id"
+                          ToolTip="Przedmiot ochronny" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" SelectionChanged="Pancerz_OnSelectionChanged"/>
+                <Grid Grid.Column="2" ToolTip="Przemia z pancerza" Grid.Row="0">
                     <TextBox PreviewTextInput="NumberValidationTextBox"
                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                             x:Name="Bron4PremiaDoAtaku"
+                             x:Name="PancerzPremia"
                              IsEnabled="False" Text="0" />
                 </Grid>
-                <Grid ToolTip="Obrazenia" Grid.Column="2">
+                <Grid ToolTip="Kara do testu" Grid.Column="3" Grid.Row="0">
                     <TextBox PreviewTextInput="NumberValidationTextBox"
                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                             x:Name="Bron4Obrazenia"
-                             IsEnabled="False" Text="0" />
+                             x:Name="PancerzKaraDoTestu"
+                             IsEnabled="False" Text="0" TextChanged="PancerzKaraDoTestu_TextChanged" />
                 </Grid>
-                <Grid ToolTip="Krytyk" Grid.Column="3">
+                <Grid ToolTip="Max zręczności" Grid.Column="4" Grid.Row="0">
                     <TextBox PreviewTextInput="NumberValidationTextBox"
-                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron4Krytyk"
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="PancerzMaxZrecz"
                              IsEnabled="False" Text="0" />
                 </Grid>
-                <Grid ToolTip="Zasięg" Grid.Column="4">
+                <Grid ToolTip="Niepowodzenie czaru" Grid.Column="0" Grid.Row="1">
                     <TextBox PreviewTextInput="NumberValidationTextBox"
-                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron4Zasieg"
-                             IsEnabled="False" Text="0" />
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="PancerzNiepowodzenieCzaru"
+                             IsEnabled="False" Text="0" TextChanged="PancerzNiepowodzenieCzaru_TextChanged" />
                 </Grid>
-                <Grid ToolTip="Rodzaj" Grid.Column="5">
+                <Grid ToolTip="Modyfikator szybkości" Grid.Column="1" Grid.Row="1">
+                    <TextBox PreviewTextInput="NumberValidationTextBox"
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="PancerzSzybkość"
+                             IsEnabled="False" Text="0" TextChanged="PancerzSzybkość_TextChanged" />
+                </Grid>
+                <Grid ToolTip="Kategoria" Grid.Column="2" Grid.Row="1">
                     <TextBox
-                        VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron4Rodzaj"
+                        VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="PancerzKategoria"
                         IsEnabled="False" />
                 </Grid>
-                <TextBox Grid.Column="6" ToolTip="Specjalne właściwości"
-                    VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Bron4Specjalne" />
+                <TextBox Grid.Column="3" ToolTip="Specjalne właściwości"
+                    VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="PancerzSpecjalne" Grid.Row="1" />
             </Grid>
+
         </Grid>
         <Grid Grid.Column="1" Grid.Row="2" Grid.RowSpan="2">
             <Grid.RowDefinitions>

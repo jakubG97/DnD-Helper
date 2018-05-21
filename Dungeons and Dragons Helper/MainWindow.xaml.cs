@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -9,6 +10,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using Dungeons_and_Dragons_Helper.Utilities;
 using log4net;
+using log4net.Repository.Hierarchy;
 
 namespace Dungeons_and_Dragons_Helper
 {
@@ -105,11 +107,34 @@ namespace Dungeons_and_Dragons_Helper
 
         private void className_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            LoadSpeed();
             LoadCharacters();
             LoadDeity();
             LoadRzutyObronne();
             LoadAtak();
             LoadBron();
+            LoadPrzedmiotyOchronne();
+        }
+
+        private void LoadPrzedmiotyOchronne()
+        {
+            try
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand())
+                {
+                    cmd.Connection = Util.SQL.dbConnection;
+                    SQLiteHelper sh = new SQLiteHelper(cmd);
+                    String query =
+                        $"SELECT przedmioty_ochronne.*, kp.nazwa as 'kategoria_nazwa', kp.dwureczna, modyfikator as modyfikator_szybkosci FROM przedmioty_ochronne JOIN kategorie_przedmiotow kp on przedmioty_ochronne.kategorie_przedmiotow_id = kp.id JOIN przedmioty_ochronne_modyfikator_szybkosci poms on przedmioty_ochronne.id = poms.przedmiot_ochronny_id WHERE kategorie_przedmiotow_id IN (6, 7) AND klasa_id = {className.SelectedValue ?? 0} AND rasa_id = {rassName.SelectedValue ?? 0};";
+                    var ret = sh.Select(query, new Dictionary<string, object>());
+                    ret?.DefaultView.AddNew();
+                    Pancerz.ItemsSource = ret?.DefaultView;
+                }
+            }
+
+            catch (Exception)
+            {
+            }
         }
 
         private void LoadBron()
@@ -121,15 +146,22 @@ namespace Dungeons_and_Dragons_Helper
                     cmd.Connection = Util.SQL.dbConnection;
                     SQLiteHelper sh = new SQLiteHelper(cmd);
                     String query =
-                        $"SELECT bron.*,r.nazwa as 'rodzaj_nazwa' FROM bron JOIN rodzaj r on bron.rodzaj_id = r.id WHERE klasa_id = {className.SelectedValue ?? 0};";
+                        $"SELECT b.id, b.nazwa|| ' - ' || r2.nazwa as nazwa, b.klasa_id, b.obrazenia, b.krytyk, r.nazwa AS kategoria_nazwa, r.dwureczna FROM bron b JOIN kategorie_przedmiotow r on b.kategorie_przedmiotow_id = r.id JOIN rozmiar r2 on b.rozmiar_id = r2.id WHERE klasa_id = {className.SelectedValue ?? 0} AND b.rozmiar_id IN(SELECT rozmiar_id FROM rozmiar_broni_rasa WHERE rasa_id = {rassName.SelectedValue ?? 0}) AND b.kategorie_przedmiotow_id IN(1,2);";
                     var ret = sh.Select(query, new Dictionary<string, object>());
                     ret?.DefaultView.AddNew();
                     Bron1.ItemsSource = ret?.DefaultView;
+                    Bron2.ItemsSource = ret?.DefaultView;
+
+                    query =
+                        $"SELECT b.id, b.nazwa|| ' - ' || r2.nazwa as nazwa, b.klasa_id, b.obrazenia, b.krytyk, r.nazwa AS kategoria_nazwa, r.dwureczna FROM bron b JOIN kategorie_przedmiotow r on b.kategorie_przedmiotow_id = r.id JOIN rozmiar r2 on b.rozmiar_id = r2.id WHERE klasa_id = {className.SelectedValue ?? 0} AND b.rozmiar_id IN(SELECT rozmiar_id FROM rozmiar_broni_rasa WHERE rasa_id = {rassName.SelectedValue ?? 0}) AND b.kategorie_przedmiotow_id = 4;";
+                    ret = sh.Select(query, new Dictionary<string, object>());
+                    ret?.DefaultView.AddNew();
+                    Bron3.ItemsSource = ret?.DefaultView;
                 }
             }
-
-            catch (Exception)
+            catch (Exception e)
             {
+                Log.Error(e);
             }
         }
 
@@ -217,6 +249,34 @@ namespace Dungeons_and_Dragons_Helper
             weight_TextChanged(null, null);
             LoadSizes();
             RecalculateSize();
+            LoadSpeed();
+        }
+
+        private void LoadSpeed()
+        {
+            Double speed = 0.0;
+            try
+            {
+                speed += (Int64) (((DataRowView) rassName.SelectedItem)["szybkosc"] ?? 0);
+                if (className.SelectedItem != null)
+                {
+                    speed += (Int64) (((DataRowView) className.SelectedItem)["modyfikator_szybkosci"] ?? 0);
+                }
+
+                if (PancerzSzybkość.Text != "")
+                {
+                    if (Double.TryParse(PancerzSzybkość.Text.Replace(".", ","), out double s))
+                    {
+                        speed += s;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Log.Error(e);
+            }
+
+            Szybkosc.Text = speed.ToString(CultureInfo.InvariantCulture);
         }
 
         private void age_TextChanged(object sender, TextChangedEventArgs e)
@@ -331,7 +391,17 @@ namespace Dungeons_and_Dragons_Helper
                 var enteredText = attributeTextField.Text == "" ? "0" : attributeTextField.Text;
                 if (Int64.Parse(enteredText) == (Int64) attribute["wartosc"])
                 {
-                    modificatorTextField.Content = ((Int64) attribute["modyfikator"]).ToString();
+                    var new_mod = ((Int64) attribute["modyfikator"]);
+                    if (modificatorTextField.Name == "SkillModificatorValue")
+                    {
+                        var max = GetMaxSkillModifier();
+
+                        modificatorTextField.Content = new_mod > max ? max.ToString() : new_mod.ToString();
+                    }
+                    else
+                    {
+                        modificatorTextField.Content = new_mod.ToString();
+                    }
                 }
             }
 
@@ -518,26 +588,42 @@ namespace Dungeons_and_Dragons_Helper
             LoadAtak();
         }
 
-        private void Bron_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void BronWrecz_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var comboBox = (ComboBox) sender;
             var currentItem = ((ComboBox) sender).SelectedItem;
-            if (currentItem != null)
+            if (comboBox.SelectedIndex != -1)
             {
+                if ((long?) ((DataRowView) Pancerz.SelectedItem)?["kategorie_przedmiotow_id"] == 7)
+                {
+                    ClearPrzedmiotOchronny("Pancerz");
+                }
+
+                ClearBron("Bron3"); //Usuwamy dystansowe bo są dwureczne
                 try
                 {
-                    GetControlByName<TextBox>(comboBox.Name + "PremiaDoAtaku").Text =
-                        ((Int64) (((DataRowView) currentItem)["premia_do_ataku"] ?? 0)).ToString();
                     GetControlByName<TextBox>(comboBox.Name + "Obrazenia").Text =
-                        ((Int64) (((DataRowView) currentItem)["obrazenia"] ?? 0)).ToString();
+                        ((String) (((DataRowView) currentItem)["obrazenia"] ?? 0));
                     GetControlByName<TextBox>(comboBox.Name + "Krytyk").Text =
-                        ((Int64) (((DataRowView) currentItem)["krytyk"] ?? 0)).ToString();
-                    GetControlByName<TextBox>(comboBox.Name + "Zasieg").Text =
-                        ((Int64) (((DataRowView) currentItem)["zasieg"] ?? 0)).ToString();
-                    GetControlByName<TextBox>(comboBox.Name + "Rodzaj").Text =
-                        (String) (((DataRowView) currentItem)["rodzaj_nazwa"] ?? "");
+                        ((String) (((DataRowView) currentItem)["krytyk"] ?? 0));
+                    GetControlByName<TextBox>(comboBox.Name + "Kategoria").Text =
+                        (String) (((DataRowView) currentItem)["kategoria_nazwa"] ?? "");
+                    GetControlByName<TextBox>(comboBox.Name + "Kategoria").ToolTip = "Kategoria: " +
+                                                                                     (String) (
+                                                                                         ((DataRowView) currentItem)[
+                                                                                             "kategoria_nazwa"] ?? "");
+
+                    if ((Int64) (((DataRowView) currentItem)["dwureczna"]) == 1)
+                    {
+                        //Dwuręczna
+                        LockBron(comboBox.Name.EndsWith("1") ? "Bron2" : "Bron1", true);
+                    }
+                    else
+                    {
+                        LockBron(comboBox.Name.EndsWith("1") ? "Bron2" : "Bron1", false);
+                    }
                 }
-                catch (Exception)
+                catch (Exception exception)
                 {
                     ClearBron(comboBox.Name);
                 }
@@ -550,18 +636,215 @@ namespace Dungeons_and_Dragons_Helper
 
         private void ClearBron(string index)
         {
+            GetControlByName<ComboBox>(index).SelectedIndex = -1;
+            GetControlByName<TextBox>(index + "Kategoria").ToolTip = "Kategoria";
             GetControlByName<TextBox>(index + "PremiaDoAtaku").Text = "0";
             GetControlByName<TextBox>(index + "Obrazenia").Text = "0";
             GetControlByName<TextBox>(index + "Krytyk").Text = "0";
-            GetControlByName<TextBox>(index + "Zasieg").Text = "0";
-            GetControlByName<TextBox>(index + "Rodzaj").Text = "";
+            GetControlByName<TextBox>(index + "Kategoria").Text = "";
             GetControlByName<TextBox>(index + "Specjalne").Text = "";
+        }
+
+        private void LockBron(string index, bool new_state)
+        {
+            if (new_state) ClearBron(index);
+            GetControlByName<TextBox>(index + "Specjalne").IsEnabled = !new_state;
+            GetControlByName<ComboBox>(index).IsEnabled = !new_state;
         }
 
         private T GetControlByName<T>(string name)
         {
             T obj = (T) FindName(name);
             return obj;
+        }
+
+        private void Bron3_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var comboBox = (ComboBox) sender;
+            var currentItem = ((ComboBox) sender).SelectedItem;
+            if (comboBox.SelectedIndex != -1)
+            {
+                if ((long?) ((DataRowView) Pancerz.SelectedItem)?["kategorie_przedmiotow_id"] == 7)
+                {
+                    ClearPrzedmiotOchronny("Pancerz");
+                }
+
+                //Wszystkie dystansowe są dwuręczne
+                ClearBron("Bron1");
+                ClearBron("Bron2");
+                try
+                {
+                    GetControlByName<TextBox>(comboBox.Name + "Obrazenia").Text =
+                        ((String) (((DataRowView) currentItem)["obrazenia"] ?? 0));
+                    GetControlByName<TextBox>(comboBox.Name + "Krytyk").Text =
+                        ((String) (((DataRowView) currentItem)["krytyk"] ?? 0));
+                    GetControlByName<TextBox>(comboBox.Name + "Kategoria").Text =
+                        (String) (((DataRowView) currentItem)["kategoria_nazwa"] ?? "");
+                    GetControlByName<TextBox>(comboBox.Name + "Kategoria").ToolTip = "Kategoria: " +
+                                                                                     (String) (
+                                                                                         ((DataRowView) currentItem)[
+                                                                                             "kategoria_nazwa"] ?? "");
+                }
+                catch (Exception exception)
+                {
+                    ClearBron(comboBox.Name);
+                }
+            }
+            else
+            {
+                ClearBron(comboBox.Name);
+            }
+        }
+
+        private void Pancerz_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var currentItem = ((ComboBox) sender).SelectedItem;
+            if (currentItem != null)
+            {
+                try
+                {
+                    PancerzPremia.Text =
+                        ((Int64) (((DataRowView) currentItem)["premia"] ?? 0)).ToString();
+                    PancerzKaraDoTestu.Text =
+                        ((Int64) (((DataRowView) currentItem)["kara_do_testu"] ?? 0)).ToString();
+                    PancerzMaxZrecz.Text =
+                        (String) (((DataRowView) currentItem)["max_zrecznosc"] ?? 0);
+                    PancerzNiepowodzenieCzaru.Text =
+                        ((Int64) (((DataRowView) currentItem)["niepowodzenie_czaru"] ?? "0")).ToString() + "%";
+                    PancerzSzybkość.Text =
+                        ((Double) (((DataRowView) currentItem)["modyfikator_szybkosci"] ?? "0")).ToString(CultureInfo
+                            .InvariantCulture);
+                    PancerzKategoria.Text =
+                        (String) (((DataRowView) currentItem)["kategoria_nazwa"] ?? "");
+
+
+                    SprawdzTarcze();
+                }
+                catch (Exception exception)
+                {
+                    ClearPrzedmiotOchronny("Pancerz");
+                }
+            }
+            else
+            {
+                ClearPrzedmiotOchronny("Pancerz");
+            }
+
+            RecalculateAttributes();
+        }
+
+        private void ClearPrzedmiotOchronny(string index)
+        {
+            GetControlByName<ComboBox>(index).SelectedIndex = -1;
+            GetControlByName<TextBox>(index + "Premia").Text = "0";
+            GetControlByName<TextBox>(index + "KaraDoTestu").Text = "0";
+            GetControlByName<TextBox>(index + "MaxZrecz").Text = "0";
+            GetControlByName<TextBox>(index + "NiepowodzenieCzaru").Text = "0";
+            GetControlByName<TextBox>(index + "Szybkość").Text = "0";
+            GetControlByName<TextBox>(index + "Kategoria").Text = "";
+        }
+
+        private void SprawdzTarcze()
+        {
+            if ((Int64) (((DataRowView) Pancerz.SelectedItem)["kategorie_przedmiotow_id"]) != 7) //nie jest to tarcza
+            {
+                return;
+            }
+
+            if (Pancerz.SelectedIndex != -1)
+            {
+                if (Bron3.SelectedIndex != -1) ClearBron("Bron3");
+                if (Bron1.SelectedIndex != -1)
+                {
+                    if ((Int64) ((DataRowView) Bron1.SelectedItem)["dwureczna"] == 1) //Pierwsza bron dwureczna
+                    {
+                        ClearBron("Bron1");
+                    }
+                }
+
+                if (Bron2.SelectedIndex != -1)
+                {
+                    if ((Int64) ((DataRowView) Bron2.SelectedItem)["dwureczna"] == 1) //Druga bron dwureczna
+                    {
+                        ClearBron("Bron2");
+                    }
+                }
+
+                if (Bron1.SelectedIndex != -1 && Bron2.SelectedIndex != -1)
+                {
+                    ClearBron("Bron2");
+                }
+            }
+        }
+
+        private void PancerzSzybkość_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            LoadSpeed();
+        }
+
+        private void PancerzNiepowodzenieCzaru_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            LoadNiepowodzenieCzaru();
+        }
+
+        private void LoadNiepowodzenieCzaru()
+        {
+            double procent = 0.0;
+            try
+            {
+                if (PancerzNiepowodzenieCzaru.Text != "")
+                {
+                    if (Double.TryParse(PancerzNiepowodzenieCzaru.Text.Replace(".", ",").Replace("%", ""),
+                        out double s))
+                    {
+                        procent += s;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+            NiepowodzenieCzaruWtajemniczen.Text = procent + "%";
+        }
+
+        private void PancerzKaraDoTestu_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            LoadKaraDoTestu();
+        }
+
+        private void LoadKaraDoTestu()
+        {
+            double wartosc = 0.0;
+            try
+            {
+                if (PancerzKaraDoTestu.Text != "")
+                {
+                    if (Double.TryParse(PancerzKaraDoTestu.Text.Replace(".", ","), out double s))
+                    {
+                        wartosc += s;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+            KaraDoTestuZPancerza.Text = wartosc.ToString(CultureInfo.InvariantCulture);
+        }
+
+        private long GetMaxSkillModifier()
+        {
+            long pancerz = Int64.MaxValue;
+            long tarcza = Int64.MaxValue;
+            if (PancerzMaxZrecz.Text != "" && PancerzMaxZrecz.Text != "-") pancerz = Int64.Parse(PancerzMaxZrecz.Text.Replace("-",""));
+
+            if (pancerz != 0 && tarcza != 0)
+            {
+                return pancerz < tarcza ? pancerz : tarcza;
+            }
+
+            return Int64.MaxValue;
         }
     }
 }
