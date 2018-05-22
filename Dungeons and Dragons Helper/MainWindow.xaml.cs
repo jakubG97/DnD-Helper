@@ -125,10 +125,21 @@ namespace Dungeons_and_Dragons_Helper
                     cmd.Connection = Util.SQL.dbConnection;
                     SQLiteHelper sh = new SQLiteHelper(cmd);
                     String query =
-                        $"SELECT przedmioty_ochronne.*, kp.nazwa as 'kategoria_nazwa', kp.dwureczna, modyfikator as modyfikator_szybkosci FROM przedmioty_ochronne JOIN kategorie_przedmiotow kp on przedmioty_ochronne.kategorie_przedmiotow_id = kp.id JOIN przedmioty_ochronne_modyfikator_szybkosci poms on przedmioty_ochronne.id = poms.przedmiot_ochronny_id WHERE kategorie_przedmiotow_id IN (6, 7) AND klasa_id = {className.SelectedValue ?? 0} AND rasa_id = {rassName.SelectedValue ?? 0};";
+                        $"SELECT przedmioty_ochronne.*, kp.nazwa as 'kategoria_nazwa', kp.dwureczna, modyfikator as modyfikator_szybkosci FROM przedmioty_ochronne JOIN kategorie_przedmiotow kp on przedmioty_ochronne.kategorie_przedmiotow_id = kp.id JOIN przedmioty_ochronne_modyfikator_szybkosci poms on przedmioty_ochronne.id = poms.przedmiot_ochronny_id WHERE kategorie_przedmiotow_id =6 AND klasa_id = {className.SelectedValue ?? 0} AND rasa_id = {rassName.SelectedValue ?? 0};";
                     var ret = sh.Select(query, new Dictionary<string, object>());
                     ret?.DefaultView.AddNew();
                     Pancerz.ItemsSource = ret?.DefaultView;
+                }
+
+                using (SQLiteCommand cmd = new SQLiteCommand())
+                {
+                    cmd.Connection = Util.SQL.dbConnection;
+                    SQLiteHelper sh = new SQLiteHelper(cmd);
+                    String query =
+                        $"SELECT przedmioty_ochronne.*, kp.nazwa as 'kategoria_nazwa', kp.dwureczna, modyfikator as modyfikator_szybkosci FROM przedmioty_ochronne JOIN kategorie_przedmiotow kp on przedmioty_ochronne.kategorie_przedmiotow_id = kp.id JOIN przedmioty_ochronne_modyfikator_szybkosci poms on przedmioty_ochronne.id = poms.przedmiot_ochronny_id WHERE kategorie_przedmiotow_id =7 AND klasa_id = {className.SelectedValue ?? 0} AND rasa_id = {rassName.SelectedValue ?? 0};";
+                    var ret = sh.Select(query, new Dictionary<string, object>());
+                    ret?.DefaultView.AddNew();
+                    Tarcza.ItemsSource = ret?.DefaultView;
                 }
             }
 
@@ -250,6 +261,23 @@ namespace Dungeons_and_Dragons_Helper
             LoadSizes();
             RecalculateSize();
             LoadSpeed();
+            LoadRozmaiteModyfikatoryRzutyObronne();
+        }
+
+        private void LoadRozmaiteModyfikatoryRzutyObronne()
+        {
+            if ((Int64) (((DataRowView) rassName.SelectedItem)["id"] ?? 0) == 2)
+            {
+                RozmaiteModyfikatoryWytrwalosc.Text = "1";
+                RozmaiteModyfikatoryRefleks.Text = "1";
+                RozmaiteModyfikatoryWola.Text = "1";
+            }
+            else
+            {
+                RozmaiteModyfikatoryWytrwalosc.Text = "0";
+                RozmaiteModyfikatoryRefleks.Text = "0";
+                RozmaiteModyfikatoryWola.Text = "0";
+            }
         }
 
         private void LoadSpeed()
@@ -266,6 +294,14 @@ namespace Dungeons_and_Dragons_Helper
                 if (PancerzSzybkość.Text != "")
                 {
                     if (Double.TryParse(PancerzSzybkość.Text.Replace(".", ","), out double s))
+                    {
+                        speed += s;
+                    }
+                }
+
+                if (TarczaSzybkość.Text != "")
+                {
+                    if (Double.TryParse(TarczaSzybkość.Text.Replace(".", ","), out double s))
                     {
                         speed += s;
                     }
@@ -477,7 +513,7 @@ namespace Dungeons_and_Dragons_Helper
         {
             try
             {
-                var selectedSize = Rozmiar.getRozmiarById(size.SelectedIndex + 1);
+                var selectedSize = GetSizeModifier();
                 ModyfRozm1.Text = ((int) selectedSize).ToString();
                 ModyfikatorRozmiaruAtakDystans.Text = ((int) selectedSize).ToString();
                 ModyfikatorRozmiaruAtakWrecz.Text = ((int) selectedSize).ToString();
@@ -594,9 +630,9 @@ namespace Dungeons_and_Dragons_Helper
             var currentItem = ((ComboBox) sender).SelectedItem;
             if (comboBox.SelectedIndex != -1)
             {
-                if ((long?) ((DataRowView) Pancerz.SelectedItem)?["kategorie_przedmiotow_id"] == 7)
+                if (Tarcza.SelectedItem != null)
                 {
-                    ClearPrzedmiotOchronny("Pancerz");
+                    ClearPrzedmiotOchronny("Tarcza");
                 }
 
                 ClearBron("Bron3"); //Usuwamy dystansowe bo są dwureczne
@@ -664,14 +700,15 @@ namespace Dungeons_and_Dragons_Helper
             var currentItem = ((ComboBox) sender).SelectedItem;
             if (comboBox.SelectedIndex != -1)
             {
-                if ((long?) ((DataRowView) Pancerz.SelectedItem)?["kategorie_przedmiotow_id"] == 7)
+                if (Tarcza.SelectedItem != null)
                 {
-                    ClearPrzedmiotOchronny("Pancerz");
+                    ClearPrzedmiotOchronny("Tarcza");
                 }
 
                 //Wszystkie dystansowe są dwuręczne
                 ClearBron("Bron1");
                 ClearBron("Bron2");
+                ClearPrzedmiotOchronny("Tarcza");
                 try
                 {
                     GetControlByName<TextBox>(comboBox.Name + "Obrazenia").Text =
@@ -746,12 +783,12 @@ namespace Dungeons_and_Dragons_Helper
 
         private void SprawdzTarcze()
         {
-            if ((Int64) (((DataRowView) Pancerz.SelectedItem)["kategorie_przedmiotow_id"]) != 7) //nie jest to tarcza
+            if (Tarcza.SelectedIndex == -1) //Tarcza nie aktywna
             {
                 return;
             }
 
-            if (Pancerz.SelectedIndex != -1)
+            try
             {
                 if (Bron3.SelectedIndex != -1) ClearBron("Bron3");
                 if (Bron1.SelectedIndex != -1)
@@ -775,6 +812,10 @@ namespace Dungeons_and_Dragons_Helper
                     ClearBron("Bron2");
                 }
             }
+            catch (Exception e)
+            {
+                Log.Error(e);
+            }
         }
 
         private void PancerzSzybkość_TextChanged(object sender, TextChangedEventArgs e)
@@ -795,6 +836,15 @@ namespace Dungeons_and_Dragons_Helper
                 if (PancerzNiepowodzenieCzaru.Text != "")
                 {
                     if (Double.TryParse(PancerzNiepowodzenieCzaru.Text.Replace(".", ",").Replace("%", ""),
+                        out double s))
+                    {
+                        procent += s;
+                    }
+                }
+
+                if (TarczaNiepowodzenieCzaru.Text != "")
+                {
+                    if (Double.TryParse(TarczaNiepowodzenieCzaru.Text.Replace(".", ",").Replace("%", ""),
                         out double s))
                     {
                         procent += s;
@@ -833,11 +883,23 @@ namespace Dungeons_and_Dragons_Helper
             KaraDoTestuZPancerza.Text = wartosc.ToString(CultureInfo.InvariantCulture);
         }
 
+        private Int64 GetSizeModifier()
+        {
+            var ret = Util.GetAllFromTable("modyfikator_rozmiar_rasa",
+                new Dictionary<string, object>()
+                {
+                    {"rasa_id", rassName.SelectedValue},
+                    {"rozmiar_id", (int) Rozmiar.getRozmiarById(size.SelectedIndex + 1)}
+                });
+            return (Int64) ret.Rows[0]["modyfikator"];
+        }
+
         private long GetMaxSkillModifier()
         {
             long pancerz = Int64.MaxValue;
             long tarcza = Int64.MaxValue;
-            if (PancerzMaxZrecz.Text != "" && PancerzMaxZrecz.Text != "-") pancerz = Int64.Parse(PancerzMaxZrecz.Text.Replace("-",""));
+            if (PancerzMaxZrecz.Text != "" && PancerzMaxZrecz.Text != "-")
+                pancerz = Int64.Parse(PancerzMaxZrecz.Text.Replace("-", ""));
 
             if (pancerz != 0 && tarcza != 0)
             {
@@ -845,6 +907,68 @@ namespace Dungeons_and_Dragons_Helper
             }
 
             return Int64.MaxValue;
+        }
+
+        private void TarczaKaraDoTestu_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            LoadKaraDoTestu();
+        }
+
+        private void Tarcza_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var currentItem = ((ComboBox) sender).SelectedItem;
+            if (currentItem != null)
+            {
+                try
+                {
+                    TarczaPremia.Text =
+                        ((Int64) (((DataRowView) currentItem)["premia"] ?? 0)).ToString();
+                    TarczaKaraDoTestu.Text =
+                        ((Int64) (((DataRowView) currentItem)["kara_do_testu"] ?? 0)).ToString();
+                    TarczaMaxZrecz.Text =
+                        (String) (((DataRowView) currentItem)["max_zrecznosc"] ?? 0);
+                    TarczaNiepowodzenieCzaru.Text =
+                        ((Int64) (((DataRowView) currentItem)["niepowodzenie_czaru"] ?? "0")).ToString() + "%";
+                    TarczaSzybkość.Text =
+                        ((Double) (((DataRowView) currentItem)["modyfikator_szybkosci"] ?? "0")).ToString(CultureInfo
+                            .InvariantCulture);
+                    TarczaKategoria.Text =
+                        (String) (((DataRowView) currentItem)["kategoria_nazwa"] ?? "");
+
+
+                    SprawdzTarcze();
+                }
+                catch (Exception exception)
+                {
+                    ClearPrzedmiotOchronny("Tarcza");
+                }
+            }
+            else
+            {
+                ClearPrzedmiotOchronny("Tarcza");
+            }
+
+            RecalculateAttributes();
+        }
+
+        private void TarczaNiepowodzenieCzaru_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            LoadNiepowodzenieCzaru();
+        }
+
+        private void TarczaSzybkość_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            LoadSpeed();
+        }
+
+        private void TarczaPremia_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            PremiaZTarczy.Text = ((TextBox) sender).Text;
+        }
+
+        private void PancerzPremia_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            PremiaZPancerza.Text = ((TextBox) sender).Text;
         }
     }
 }
