@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Input;
 using Dungeons_and_Dragons_Helper.Utilities;
 using log4net;
@@ -192,22 +193,34 @@ namespace Dungeons_and_Dragons_Helper
                             "poziom", (Int64) (lvl.SelectedIndex + 1)
                         }
                     });
-                if (atak == null)
+                if (atak?.Rows == null || atak.Rows.Count == 0)
                 {
-                    BazowaPremiaAtakuWrecz.Text = "0";
-                    BazowaPremiaAtakuDystans.Text = "0";
-                    return;
+                    throw new Exception("Database does not contain data for this configuration");
                 }
 
                 foreach (DataRow atakRow in atak.Rows)
                 {
-                    BazowaPremiaAtakuWrecz.Text = ((Int64) atakRow["premia1"]).ToString();
-                    BazowaPremiaAtakuDystans.Text = ((Int64) atakRow["premia1"]).ToString();
+                    BazowaPremiaAtakuWrecz1.Text = ((Int64) atakRow["premia1"]).ToString();
+                    BazowaPremiaAtakuWrecz2.Text = ((Int64) atakRow["premia2"]).ToString();
+                    BazowaPremiaAtakuWrecz3.Text = ((Int64) atakRow["premia3"]).ToString();
+                    BazowaPremiaAtakuWrecz4.Text = ((Int64) atakRow["premia4"]).ToString();
+                    BazowaPremiaAtakuDystans1.Text = ((Int64) atakRow["premia1"]).ToString();
+                    BazowaPremiaAtakuDystans2.Text = ((Int64) atakRow["premia2"]).ToString();
+                    BazowaPremiaAtakuDystans3.Text = ((Int64) atakRow["premia3"]).ToString();
+                    BazowaPremiaAtakuDystans4.Text = ((Int64) atakRow["premia4"]).ToString();
                 }
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
+                BazowaPremiaAtakuWrecz1.Text = "0";
+                BazowaPremiaAtakuWrecz2.Text = "0";
+                BazowaPremiaAtakuWrecz3.Text = "0";
+                BazowaPremiaAtakuWrecz4.Text = "0";
+                BazowaPremiaAtakuDystans1.Text = "0";
+                BazowaPremiaAtakuDystans2.Text = "0";
+                BazowaPremiaAtakuDystans3.Text = "0";
+                BazowaPremiaAtakuDystans4.Text = "0";
             }
         }
 
@@ -454,6 +467,8 @@ namespace Dungeons_and_Dragons_Helper
                 ModyfikatorZAtrybutuWola.Text = GetAttributeModificatorTextFieldById(5).Content.ToString();
                 ModyfikatorSilyAtakWrecz.Text = GetAttributeModificatorTextFieldById(1).Content.ToString();
                 ModyfikatorZreczAtakDystans.Text = GetAttributeModificatorTextFieldById(2).Content.ToString();
+                RefreshObrazeniaWrecz(Bron1);
+                RefreshObrazeniaWrecz(Bron2);
             }
             catch (Exception ex)
             {
@@ -578,43 +593,121 @@ namespace Dungeons_and_Dragons_Helper
 
         private void RecalculateAtakWrecz(object sender, TextChangedEventArgs e)
         {
-            AtakWreczSum.Text =
-                GetIntegerSumOfTextFields(new List<TextBox>()
-                    {
-                        BazowaPremiaAtakuWrecz,
-                        ModyfikatorSilyAtakWrecz,
-                        ModyfikatorRozmiaruAtakWrecz,
-                        RozmaiteModyfikatoryAtakWrecz
-                    })
-                    .ToString();
+            if (BazowaPremiaAtakuWrecz1 != null)
+                AtakWreczSum1.Text = BazowaPremiaAtakuWrecz1.Text != "0"
+                    ? GetIntegerSumOfTextFields(new List<TextBox>()
+                        {
+                            BazowaPremiaAtakuWrecz1,
+                            ModyfikatorSilyAtakWrecz,
+                            ModyfikatorRozmiaruAtakWrecz,
+                            RozmaiteModyfikatoryAtakWrecz
+                        })
+                        .ToString()
+                    : "0";
+            if (BazowaPremiaAtakuWrecz2 != null)
+                AtakWreczSum2.Text = BazowaPremiaAtakuWrecz2.Text != "0"
+                    ? GetIntegerSumOfTextFields(new List<TextBox>()
+                        {
+                            BazowaPremiaAtakuWrecz2,
+                            ModyfikatorSilyAtakWrecz,
+                            ModyfikatorRozmiaruAtakWrecz,
+                            RozmaiteModyfikatoryAtakWrecz
+                        })
+                        .ToString()
+                    : "0";
+            if (BazowaPremiaAtakuWrecz3 != null)
+                AtakWreczSum3.Text = BazowaPremiaAtakuWrecz3.Text != "0"
+                    ? AtakWreczSum3.Text =
+                        GetIntegerSumOfTextFields(new List<TextBox>()
+                            {
+                                BazowaPremiaAtakuWrecz3,
+                                ModyfikatorSilyAtakWrecz,
+                                ModyfikatorRozmiaruAtakWrecz,
+                                RozmaiteModyfikatoryAtakWrecz
+                            })
+                            .ToString()
+                    : "0";
+            if (BazowaPremiaAtakuWrecz4 != null)
+                AtakWreczSum4.Text = BazowaPremiaAtakuWrecz4.Text != "0"
+                    ? AtakWreczSum4.Text =
+                        GetIntegerSumOfTextFields(new List<TextBox>()
+                            {
+                                BazowaPremiaAtakuWrecz4,
+                                ModyfikatorSilyAtakWrecz,
+                                ModyfikatorRozmiaruAtakWrecz,
+                                RozmaiteModyfikatoryAtakWrecz
+                            })
+                            .ToString()
+                    : "0";
         }
 
         private void RecalculateAtakDystans(object sender, TextChangedEventArgs e)
         {
-            AtakDystansSum.Text =
-                GetIntegerSumOfTextFields(new List<TextBox>()
-                    {
-                        BazowaPremiaAtakuDystans,
-                        ModyfikatorZreczAtakDystans,
-                        ModyfikatorRozmiaruAtakDystans,
-                        RozmaiteModyfikatoryAtakDystans
-                    })
-                    .ToString();
+            if (BazowaPremiaAtakuDystans1 != null)
+                AtakDystansSum1.Text = BazowaPremiaAtakuDystans1.Text != "0"
+                    ? GetIntegerSumOfTextFields(new List<TextBox>()
+                        {
+                            BazowaPremiaAtakuDystans1,
+                            ModyfikatorZreczAtakDystans,
+                            ModyfikatorRozmiaruAtakDystans,
+                            RozmaiteModyfikatoryAtakDystans
+                        })
+                        .ToString()
+                    : "0";
+            if (BazowaPremiaAtakuDystans2 != null)
+                AtakDystansSum2.Text = BazowaPremiaAtakuDystans2.Text != "0"
+                    ? GetIntegerSumOfTextFields(new List<TextBox>()
+                        {
+                            BazowaPremiaAtakuDystans2,
+                            ModyfikatorZreczAtakDystans,
+                            ModyfikatorRozmiaruAtakDystans,
+                            RozmaiteModyfikatoryAtakDystans
+                        })
+                        .ToString()
+                    : "0";
+
+            if (BazowaPremiaAtakuDystans3 != null)
+                AtakDystansSum3.Text = BazowaPremiaAtakuDystans3.Text != "0"
+                    ? GetIntegerSumOfTextFields(new List<TextBox>()
+                        {
+                            BazowaPremiaAtakuDystans3,
+                            ModyfikatorZreczAtakDystans,
+                            ModyfikatorRozmiaruAtakDystans,
+                            RozmaiteModyfikatoryAtakDystans
+                        })
+                        .ToString()
+                    : "0";
+
+            if (BazowaPremiaAtakuDystans4 != null)
+                AtakDystansSum4.Text = BazowaPremiaAtakuDystans4.Text != "0"
+                    ? GetIntegerSumOfTextFields(new List<TextBox>()
+                        {
+                            BazowaPremiaAtakuDystans4,
+                            ModyfikatorZreczAtakDystans,
+                            ModyfikatorRozmiaruAtakDystans,
+                            RozmaiteModyfikatoryAtakDystans
+                        })
+                        .ToString()
+                    : "0";
         }
 
         private int GetIntegerSumOfTextFields(List<TextBox> list)
         {
             var sum = 0;
-            foreach (var textBox in list)
-            {
-                try
+            if (list != null)
+                foreach (var textBox in list)
                 {
-                    if (Int32.TryParse(textBox.Text, out int output)) sum += output;
+                    try
+                    {
+                        if (textBox == null) continue;
+                        if (Int32.TryParse(textBox.Text, out int output))
+                            sum += output;
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error(ex);
+                    }
                 }
-                catch (Exception)
-                {
-                }
-            }
 
             return sum;
         }
@@ -658,6 +751,9 @@ namespace Dungeons_and_Dragons_Helper
                     {
                         LockBron(comboBox.Name.EndsWith("1") ? "Bron2" : "Bron1", false);
                     }
+
+                    RefreshObrazeniaWrecz(comboBox);
+                    AtakPremia_TextChanged(null, null);
                 }
                 catch (Exception exception)
                 {
@@ -669,6 +765,33 @@ namespace Dungeons_and_Dragons_Helper
                 ClearBron(comboBox.Name);
             }
         }
+
+        private void RefreshObrazeniaWrecz(ComboBox cb)
+        {
+            var currentItem = cb.SelectedItem;
+            if (cb.SelectedIndex != -1)
+            {
+                var ctrl = GetControlByName<TextBox>(cb.Name + "Obrazenia");
+                if ((Int64) (((DataRowView) currentItem)["dwureczna"]) == 1)
+                {
+                    //Dwuręczna
+                    if (decimal.TryParse(StrengthModificatorValue.Content.ToString(), out decimal result))
+                    {
+                        var str = ((int) Math.Ceiling((double) result / 2) + result).ToString(CultureInfo
+                            .InvariantCulture);
+                        ctrl.Text = ctrl.Text.Split(' ')[0] + " " +
+                                    (str.StartsWith("-") ? "" : "+") + str;
+                    }
+                }
+                else
+                {
+                    ctrl.Text = ctrl.Text.Split(' ')[0] + " " +
+                                (StrengthModificatorValue.Content.ToString().StartsWith("-") ? "" : "+") +
+                                StrengthModificatorValue.Content;
+                }
+            }
+        }
+        
 
         private void ClearBron(string index)
         {
@@ -721,6 +844,8 @@ namespace Dungeons_and_Dragons_Helper
                                                                                      (String) (
                                                                                          ((DataRowView) currentItem)[
                                                                                              "kategoria_nazwa"] ?? "");
+
+                    AtakPremia_TextChanged(null, null);
                 }
                 catch (Exception exception)
                 {
@@ -969,6 +1094,65 @@ namespace Dungeons_and_Dragons_Helper
         private void PancerzPremia_TextChanged(object sender, TextChangedEventArgs e)
         {
             PremiaZPancerza.Text = ((TextBox) sender).Text;
+        }
+
+        private void AtakPremia_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            BazowyAtakWrecz.Text = GetSummaryForBazowyAtakWrecz();
+            BazowyAtakDyst.Text = GetSummaryForBazowyAtakDyst();
+            if (Bron1 != null && Bron1.SelectedIndex != -1)
+            {
+                Bron1PremiaDoAtaku.Text = GetSummaryForAtakWrecz();
+            }
+
+            if (Bron2 != null && Bron2?.SelectedIndex != -1)
+            {
+                Bron2PremiaDoAtaku.Text = GetSummaryForAtakWrecz();
+            }
+            if (Bron3 != null && Bron3?.SelectedIndex != -1)
+            {
+                Bron3PremiaDoAtaku.Text = GetSummaryForAtakDyst();
+            }
+        }
+
+        private string GetSummaryForBazowyAtakWrecz()
+        {
+            var wrecz = new List<string>();
+            if (BazowaPremiaAtakuWrecz1 != null) wrecz.Add(BazowaPremiaAtakuWrecz1.Text);
+            if (BazowaPremiaAtakuWrecz2 != null) wrecz.Add(BazowaPremiaAtakuWrecz2.Text);
+            if (BazowaPremiaAtakuWrecz3 != null) wrecz.Add(BazowaPremiaAtakuWrecz3.Text);
+            if (BazowaPremiaAtakuWrecz4 != null) wrecz.Add(BazowaPremiaAtakuWrecz4.Text);
+            return String.Join(" / ", wrecz);
+        }
+
+        private string GetSummaryForAtakWrecz()
+        {
+            var wrecz = new List<string>();
+            if (AtakWreczSum1 != null && AtakWreczSum1.Text != "0") wrecz.Add(AtakWreczSum1.Text);
+            if (AtakWreczSum2 != null && AtakWreczSum2.Text != "0") wrecz.Add(AtakWreczSum2.Text);
+            if (AtakWreczSum3 != null && AtakWreczSum3.Text != "0") wrecz.Add(AtakWreczSum3.Text);
+            if (AtakWreczSum4 != null && AtakWreczSum4.Text != "0") wrecz.Add(AtakWreczSum4.Text);
+            return String.Join(" / ", wrecz);
+        }
+
+        private string GetSummaryForBazowyAtakDyst()
+        {
+            var dyst = new List<string>();
+            if (BazowaPremiaAtakuDystans1 != null) dyst.Add(BazowaPremiaAtakuDystans1.Text);
+            if (BazowaPremiaAtakuDystans2 != null) dyst.Add(BazowaPremiaAtakuDystans2.Text);
+            if (BazowaPremiaAtakuDystans3 != null) dyst.Add(BazowaPremiaAtakuDystans3.Text);
+            if (BazowaPremiaAtakuDystans4 != null) dyst.Add(BazowaPremiaAtakuDystans4.Text);
+            return String.Join(" / ", dyst);
+        }
+
+        private string GetSummaryForAtakDyst()
+        {
+            var dyst = new List<string>();
+            if (AtakDystansSum1 != null && AtakDystansSum1.Text != "0") dyst.Add(AtakDystansSum1.Text);
+            if (AtakDystansSum2 != null && AtakDystansSum2.Text != "0") dyst.Add(AtakDystansSum2.Text);
+            if (AtakDystansSum3 != null && AtakDystansSum3.Text != "0") dyst.Add(AtakDystansSum3.Text);
+            if (AtakDystansSum4 != null && AtakDystansSum4.Text != "0") dyst.Add(AtakDystansSum4.Text);
+            return String.Join(" / ", dyst);
         }
     }
 }
